@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+h1, h2, h5{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+}
+p{
+    line-height: 1.5;
+}
+header{
+    min-height: 100vh;
+    background-image: url(images/desktop/image-header.jpg);
+    position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+   display: flex;
+   justify-content: space-between;
+   padding: 49px;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li:not(:last-child){
+    margin-right: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a.btn{
+    text-transform: uppercase;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 14px;
+    background: white;
+    color: black;
+    border-radius: 35px;
+    padding: 15px 25px;
+    transition: all 0.2s ease;
+}
+nav ul li a.btn:hover{
+    color: white;
+    background: #6eceff; 
+}
+.hero{
+    text-align: center;
+    padding-top: 15vh;
+  
+}
+.hero h1{
+    font-size: 55px;
+    color: white;
+    padding-bottom: 5vh;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.main .main-1, .main .main-2, .main .main-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.main img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.main .main-1 .text, .main .main-2 .text{
+    padding: 12vw;
+}
+.main .main-1 .text h2, .main .main-2 .text h2{
+    font-size: 40px;
+    color: hsl(212, 27%, 19%);
+}
+.main .main-1 .text p, .main .main-2 .text p{
+    color: hsl(210, 4%, 67%);
+    padding: 45px 0;
+}
+.main .main-1 .text .btn-1, .main .main-2 .text .btn-2{
+    text-decoration: none;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position:relative;
+}
+.btn-1::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 110%;
+    left: -5%;
+    background-color: hsl(51, 100%, 49%);
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+.btn-1:hover::after{
+    height: 100%;
+}
+.btn-2::after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 110%;
+    left: -5%;
+    background-color: hsl(7, 99%, 70%);
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.2s ease;
+}
+.btn-2:hover::after{
+    height: 100%;
+}
+.main-3 .card-1, .main-3 .card-2{
+    position: relative;
+}
+.main-3 .card-1 .gd{
+    position: absolute;
+    max-width: 400px;
+    top: 70%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:hsl(167, 40%, 24%)
+}
+.main-3 .card-2 .photography{
+    position: absolute;
+    max-width: 400px;
+    top: 70%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: hsl(198, 62%, 26%);
+}
+.main-3 .card-1 .gd h2, .main-3 .card-2 .photography h2{
+    margin: 30px;
+    font-size: 34px;
+}
+.testimonials{
+    text-align: center;
+    padding: 14vh 7vw;
+}
+.testimonials h2{
+    color: hsl(210, 4%, 67%);
+    text-transform: uppercase;
+    margin-bottom: 7vh;
+    letter-spacing: 5px;
+    font-size: 22px;
+
+}
+.testimonials .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+}
+.testimonials .container img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+.testimonials .container .card p{
+    color: hsl(210, 4%, 67%);
+    margin-bottom: 50px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.testimonials .container .card .designation{
+    font-size: 12px;
+    margin: 10px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0;
+    gap: 0;
+}
+.gallery img{
+    width: 100%;
+}
+footer {
+    background: #90d4c5;
+    text-align: center;
+    padding: 5rem 0;
+}
+.footer-menu{
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.footer-menu ul li  a{
+    color: hsl(168, 34%, 41%);
+}
+.footer-menu ul li  a:hover{
+    color: white;
+}
+.social-links a{
+    padding: 12px;
+}
+.hamburger{
+    display: none;
+}
+.toggle{
+    height: auto !important;
+}
+@media only screen and (max-width: 1020px){
+    .text{
+        padding: 60px;
+    }
+    .gd, .photography{
+        width: 80%;
+    }
+    .card-1 .gd, .card-2 .photography{
+        top: 67%;
+    }
+    .gd h2, .photography h2{
+        margin: 15px;
+    }
+}
+@media only screen and (max-width: 768px){
+    header{
+        height: 150vh;
+        /*background-image: url(images/mobile/image-header.jpg);*/
+        position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    .hamburger{
+        display: inline-block;
+    }
+    .navbar{
+        position: relative;
+    }
+    .nav{
+        position: absolute;
+        width: 100%;
+        background-color: #00aaff;
+        left: 0;
+        top: 100px;
+        height: 0;
+        overflow: hidden;
+        text-align: center;
+    }
+    .nav ul li{
+       display: block;
+       padding: 20px 0;
+    }
+    .nav ul li:not(:last-child){
+        margin-right: 0;
+    }
+    .main .main-1, .main .main-2, .main .main-3{
+        grid-template-columns: 1fr;
+    }
+    .testimonials .container{
+        grid-template-columns: 1fr;
+    }
+    main .gallery{
+       grid-template-columns: 1fr 1fr; 
+
+    }
+    .img-img{
+        order: -1;
+    }
+    
+}
+@media only screen and (max-width: 425px){
+    header{
+        height: 100vh;
+        background-image: url(images/mobile/image-header.jpg);
+        position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+}
